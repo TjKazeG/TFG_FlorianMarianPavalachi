@@ -15,11 +15,13 @@ public class Pantalones extends Prenda{
 	public Pantalones() {
 		super();
 	}
-	public Pantalones(String talla, String tipoTela) {
-		super();
+	
+	public Pantalones(String nombre, String descripción, Float precio, Integer stock, String talla, String tipoTela) {
+		super(nombre, descripción, precio, stock);
 		this.talla = talla;
 		this.tipoTela = tipoTela;
 	}
+
 	public Pantalones(Long id, String talla, String tipoTela) {
 		super();
 		this.id = id;

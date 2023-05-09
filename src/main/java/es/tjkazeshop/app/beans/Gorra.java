@@ -13,8 +13,9 @@ public class Gorra extends Accesorio {
 	private Long id;
 	private Float talla;
 	private String color;
-	public Gorra(String nombre, String descripción, Float precio, Float talla, String color) {
-		super(nombre, descripción, precio);
+	
+	public Gorra(String nombre, String descripción, Float precio, Integer stock, Float talla, String color) {
+		super(nombre, descripción, precio, stock);
 		this.talla = talla;
 		this.color = color;
 	}

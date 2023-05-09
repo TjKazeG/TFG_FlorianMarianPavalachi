@@ -15,11 +15,13 @@ public class Pulsera extends Accesorio {
 	public Pulsera() {
 		super();
 	}
-	public Pulsera(String nombre, String descripción, Float precio, String material, String disenho) {
-		super(nombre, descripción, precio);
+	
+	public Pulsera(String nombre, String descripción, Float precio, Integer stock, String material, String disenho) {
+		super(nombre, descripción, precio, stock);
 		this.material = material;
 		this.disenho = disenho;
 	}
+
 	public Pulsera(Long id, String material, String disenho) {
 		super();
 		this.id = id;

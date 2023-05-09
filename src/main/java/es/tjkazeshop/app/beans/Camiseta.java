@@ -21,12 +21,17 @@ public class Camiseta extends Prenda {
 		super();
 	}
 	
-	public Camiseta(String nombre, String descripción, Float precio, String talla, String color, String tipoManga) {
-		super(nombre, descripción, precio);
+	
+
+	public Camiseta(String nombre, String descripción, Float precio, Integer stock, String talla, String color,
+			String tipoManga) {
+		super(nombre, descripción, precio, stock);
 		this.talla = talla;
 		this.color = color;
 		this.tipoManga = tipoManga;
 	}
+
+
 
 	public Camiseta(Long id, String talla, String color, String tipoManga) {
 		super();

@@ -17,12 +17,15 @@ public class Gafas extends Accesorio {
 	public Gafas() {
 		super();
 	}
-	public Gafas(String nombre, String descripción, Float precio, String forma, String material) {
-		super(nombre, descripción, precio);
+	
+	
+	public Gafas(String nombre, String descripción, Float precio, Integer stock, String forma, String material) {
+		super(nombre, descripción, precio, stock);
 		this.forma = forma;
 		this.material = material;
 	}
-	
+
+
 	public Gafas(Long id, String forma, String material) {
 		super();
 		this.id = id;

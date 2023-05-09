@@ -8,28 +8,40 @@ import jakarta.persistence.Id;
 @Entity
 public class Usuario {
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    
-    private String nombreUsuario;
-    
-    private String contrasenha;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private String nombreUsuario;
+
+	private String contrasenha;
+
+	private String email;
 
 	public Usuario() {
 		super();
 	}
 
-	public Usuario(String nombreUsuario, String contrasenha) {
+	public Usuario(String nombreUsuario, String contrasenha, String email) {
 		super();
 		this.nombreUsuario = nombreUsuario;
 		this.contrasenha = contrasenha;
+		this.email = email;
 	}
 
-	public Usuario(Long id, String nombreUsuario, String contrasenha) {
+	public Usuario(Long id, String nombreUsuario, String contrasenha, String email) {
 		super();
 		this.id = id;
 		this.nombreUsuario = nombreUsuario;
 		this.contrasenha = contrasenha;
+		this.email = email;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getNombreUsuario() {
@@ -51,6 +63,5 @@ public class Usuario {
 	public Long getId() {
 		return id;
 	}
-    
-    
+
 }

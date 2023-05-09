@@ -15,11 +15,13 @@ public class Reloj extends Accesorio {
 	public Reloj() {
 		super();
 	}
-	public Reloj(String nombre, String descripción, Float precio, String marca, String tipo) {
-		super(nombre, descripción, precio);
+	
+	public Reloj(String nombre, String descripción, Float precio, Integer stock, String marca, String tipo) {
+		super(nombre, descripción, precio, stock);
 		this.marca = marca;
 		this.tipo = tipo;
 	}
+
 	public Reloj(Long id, String marca, String tipo) {
 		super();
 		this.id = id;
