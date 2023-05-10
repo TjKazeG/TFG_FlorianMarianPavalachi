@@ -24,7 +24,7 @@ public class Usuario {
 	public Usuario(String nombreUsuario, String contrasenha, String email) {
 		super();
 		this.nombreUsuario = nombreUsuario;
-		this.contrasenha = contrasenha;
+		this.contrasenha = this.convertToHash(contrasenha);
 		this.email = email;
 	}
 
@@ -62,6 +62,10 @@ public class Usuario {
 
 	public Long getId() {
 		return id;
+	}
+
+	public String convertToHash(String contrasenha) {
+		return String.valueOf(contrasenha.hashCode());
 	}
 
 }
