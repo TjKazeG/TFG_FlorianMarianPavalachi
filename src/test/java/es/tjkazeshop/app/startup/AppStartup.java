@@ -6,32 +6,32 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import es.tjkazeshop.app.persistencia.repos.CamisetaRepository;
-import es.tjkazeshop.app.persistencia.repos.GafasRepository;
-import es.tjkazeshop.app.persistencia.repos.GorraRepository;
-import es.tjkazeshop.app.persistencia.repos.PantalonesRepository;
-import es.tjkazeshop.app.persistencia.repos.PulseraRepository;
-import es.tjkazeshop.app.persistencia.repos.RelojRepository;
-import es.tjkazeshop.app.persistencia.repos.UsuarioRepository;
+import es.tjkazeshop.app.persistencia.daos.CamisetaDAO;
+import es.tjkazeshop.app.persistencia.daos.GafasDAO;
+import es.tjkazeshop.app.persistencia.daos.GorraDAO;
+import es.tjkazeshop.app.persistencia.daos.PantalonesDAO;
+import es.tjkazeshop.app.persistencia.daos.PulseraDAO;
+import es.tjkazeshop.app.persistencia.daos.RelojDAO;
+import es.tjkazeshop.app.persistencia.daos.UsuarioDAO;
 
 //Aplicacion de un solo uso que sirve para rellenar los datos de la DB.
 
 @SpringBootTest
 class AppStartup {
 	@Autowired
-	CamisetaRepository camisetaRepository;
+	CamisetaDAO camisetaRepository;
 	@Autowired
-	GafasRepository gafasRepository;
+	GafasDAO gafasRepository;
 	@Autowired
-	GorraRepository gorraRepository;
+	GorraDAO gorraRepository;
 	@Autowired
-	PantalonesRepository pantalonesRepository;
+	PantalonesDAO pantalonesRepository;
 	@Autowired
-	PulseraRepository pulseraRepository;
+	PulseraDAO pulseraRepository;
 	@Autowired
-	RelojRepository relojRepository;
+	RelojDAO relojRepository;
 	@Autowired
-	UsuarioRepository usuarioRepository;
+	UsuarioDAO usuarioRepository;
 	
 	@Test
 	void Startup() {

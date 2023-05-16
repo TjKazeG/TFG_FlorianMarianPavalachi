@@ -5,17 +5,18 @@ package es.tjkazeshop.app;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import es.tjkazeshop.app.persistencia.repos.CamisetaRepository;
-import es.tjkazeshop.app.persistencia.repos.PrendaRepository;
+
+import es.tjkazeshop.app.persistencia.daos.CamisetaDAO;
+import es.tjkazeshop.app.persistencia.daos.PrendaDAO;
 
 
 @SpringBootTest
 class TfgFlorianMarianPavalachiApplicationTests {
 	
 	@Autowired
-	CamisetaRepository camisetaRepo;
+	CamisetaDAO camisetaRepo;
 	@Autowired
-	PrendaRepository prendaRepository;
+	PrendaDAO prendaRepository;
 	@Test
 	void contextLoads() {
 		camisetaRepo.findAll().forEach((camiseta)->{System.out.println(camiseta.getNombre());});

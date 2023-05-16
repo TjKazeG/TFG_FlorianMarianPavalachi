@@ -20,34 +20,34 @@ import es.tjkazeshop.app.factory.ConcreteGorrasFactory;
 import es.tjkazeshop.app.factory.ConcretePantalonesFactory;
 import es.tjkazeshop.app.factory.ConcretePulserasFactory;
 import es.tjkazeshop.app.factory.ConcreteRelojFactory;
-import es.tjkazeshop.app.persistencia.repos.CamisetaRepository;
-import es.tjkazeshop.app.persistencia.repos.GafasRepository;
-import es.tjkazeshop.app.persistencia.repos.GorraRepository;
-import es.tjkazeshop.app.persistencia.repos.PantalonesRepository;
-import es.tjkazeshop.app.persistencia.repos.PulseraRepository;
-import es.tjkazeshop.app.persistencia.repos.RelojRepository;
-import es.tjkazeshop.app.persistencia.repos.UsuarioRepository;
+import es.tjkazeshop.app.persistencia.daos.CamisetaDAO;
+import es.tjkazeshop.app.persistencia.daos.GafasDAO;
+import es.tjkazeshop.app.persistencia.daos.GorraDAO;
+import es.tjkazeshop.app.persistencia.daos.PantalonesDAO;
+import es.tjkazeshop.app.persistencia.daos.PulseraDAO;
+import es.tjkazeshop.app.persistencia.daos.RelojDAO;
+import es.tjkazeshop.app.persistencia.daos.UsuarioDAO;
 
-@Service
+//@Service
 public class ObjectMother {
 	@Autowired
-	private final CamisetaRepository camisetaRepository;
+	private final CamisetaDAO camisetaRepository;
 	@Autowired
-	private final GafasRepository gafasRepository;
+	private final GafasDAO gafasRepository;
 	@Autowired
-	private final GorraRepository gorraRepository;
+	private final GorraDAO gorraRepository;
 	@Autowired
-	private final PantalonesRepository pantalonesRepository;
+	private final PantalonesDAO pantalonesRepository;
 	@Autowired
-	private final PulseraRepository pulseraRepository;
+	private final PulseraDAO pulseraRepository;
 	@Autowired
-	private final RelojRepository relojRepository;
+	private final RelojDAO relojRepository;
 	@Autowired
-	private final UsuarioRepository usuarioRepository;
+	private final UsuarioDAO usuarioRepository;
 	
-	public ObjectMother(CamisetaRepository camisetaRepository, GafasRepository gafasRepository,
-			GorraRepository gorraRepository, PantalonesRepository pantalonesRepository,
-			PulseraRepository pulseraRepository, RelojRepository relojRepository, UsuarioRepository usuarioRepository) {
+	public ObjectMother(CamisetaDAO camisetaRepository, GafasDAO gafasRepository,
+			GorraDAO gorraRepository, PantalonesDAO pantalonesRepository,
+			PulseraDAO pulseraRepository, RelojDAO relojRepository, UsuarioDAO usuarioRepository) {
 		super();
 		this.camisetaRepository = camisetaRepository;
 		this.gafasRepository = gafasRepository;
