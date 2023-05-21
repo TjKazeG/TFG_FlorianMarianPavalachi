@@ -9,6 +9,7 @@ import es.tjkazeshop.app.beans.Pulsera;
 import es.tjkazeshop.app.beans.Reloj;
 import es.tjkazeshop.app.beans.base.Accesorio;
 
+
 public interface AccesorioService {
 	public Optional<List<Accesorio>> getAllAccesorios();
 	public Optional<List<Gorra>> getAllGorras();
@@ -16,4 +17,5 @@ public interface AccesorioService {
 	public Optional<List<Pulsera>> getAllPulseras();
 	public Optional<List<Reloj>> getAllRelojes();
 	public Optional<List<Accesorio>> getRecommendedAccesorios();
+	public Optional<Accesorio> getAccesorioByID(Long id);
 }

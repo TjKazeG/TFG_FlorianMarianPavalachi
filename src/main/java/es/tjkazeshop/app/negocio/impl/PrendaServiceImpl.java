@@ -56,4 +56,9 @@ public class PrendaServiceImpl implements PrendaService {
 
 	}
 
+	@Override
+	public Optional<Prenda> getPrendaByID(Long id) {
+		return Optional.ofNullable(prendasDAO.findById(id).get());
+	}
+
 }

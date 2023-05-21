@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +20,7 @@ import es.tjkazeshop.app.negocio.impl.AccesorioServiceImpl;
 
 @RestController
 @RequestMapping("/accesorios")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AccesorioController  {
 	@Autowired
 	private final AccesorioServiceImpl accesorioService;
@@ -61,5 +64,11 @@ public class AccesorioController  {
 		return accesorioService.getRecommendedAccesorios()
 				.map(accesorios->{return new ResponseEntity<List<Accesorio>>(accesorios,HttpStatus.OK);})
 				.orElse(new ResponseEntity<List<Accesorio>>(HttpStatus.NO_CONTENT));
+	}
+	@GetMapping("/findbyid/{id}")
+	public ResponseEntity<Accesorio> getPrendasByID(@PathVariable Long id){
+		return accesorioService.getAccesorioByID(id)
+				.map(accesorio->{return new ResponseEntity<Accesorio>(accesorio,HttpStatus.OK);})
+				.orElse(new ResponseEntity<Accesorio>(HttpStatus.NO_CONTENT));
 	}
 }

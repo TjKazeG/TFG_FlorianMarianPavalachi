@@ -83,6 +83,11 @@ public class AccesorioServiceImpl implements AccesorioService {
 						relojDAO.findAll().stream().map((accesorio)->{return accesorio.getId();}).collect(Collectors.toList()))).get()));
 
 	}
+
+	@Override
+	public Optional<Accesorio> getAccesorioByID(Long id) {
+		return Optional.ofNullable(accesorioDAO.findById(id).get());
+	}
 	
 	
 }

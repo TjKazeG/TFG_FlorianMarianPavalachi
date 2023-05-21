@@ -12,5 +12,5 @@ public interface PrendaService {
 	public Optional<List<Camiseta>> getAllCamisetas();
 	public Optional<List<Pantalones>> getAllPantalones();
 	public Optional<List<Prenda>> getRecommendedPrendas();
-	
+	public Optional<Prenda> getPrendaByID(Long id);
 }
